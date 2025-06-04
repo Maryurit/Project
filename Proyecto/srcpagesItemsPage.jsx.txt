@@ -1,0 +1,41 @@
+// src/pages/ItemsPage.jsx
+
+import { useEffect, useState } from 'react'
+import { items as mockItems } from '../data/items'
+import { useDebounce } from '../hooks/useDebounce'
+import ItemCard from '../components/ItemCard'
+import ItemSearch from '../components/ItemSearch'
+import LoadingSkeleton from '../components/LoadingSkeleton'
+
+export default function ItemsPage() {
+  const [search, setSearch] = useState('')
+  const debouncedSearch = useDebounce(search)
+  const [loading, setLoading] = useState(false)
+  const [filtered, setFiltered] = useState([])
+
+  useEffect(() => {
+    setLoading(true)
+    setTimeout(() => {
+      const result = mockItems.filter(item =>
+        item.name.toLowerCase().includes(debouncedSearch.toLowerCase())
+      )
+      setFiltered(result)
+      setLoading(false)
+    }, 500)
+  }, [debouncedSearch])
+
+  return (
+    <div>
+      <ItemSearch value={search} onChange={setSearch} />
+      {loading ? (
+        <LoadingSkeleton />
+      ) : (
+        <div className="item-grid">
+          {filtered.map(item => (
+            <ItemCard key={item.id} {...item} />
+          ))}
+        </div>
+      )}
+    </div>
+  )
+}

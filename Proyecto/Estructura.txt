@@ -1,0 +1,27 @@
+Estructura:
+
+src/
+├── components/
+│   ├── Header.jsx
+│   ├── HeroBanner.jsx
+│   ├── CardList.jsx
+│   ├── ItemList.jsx
+│   ├── ItemCard.jsx
+│   ├── ItemSearch.jsx
+│   ├── ContactForm.jsx
+│   └── LoadingSkeleton.jsx
+├── css/
+│   ├── index.css
+│   └── modules/
+│       ├── variables.css
+│       ├── components.css
+│       └── utils.css
+├── data/
+│   └── items.js
+├── hooks/
+│   ├── useDebounce.js
+│   └── useLocalStorage.js (opcional)
+├── utils/
+│   └── notifyFavorite.js
+├── App.jsx
+└── main.jsx

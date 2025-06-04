@@ -1,0 +1,21 @@
+crear un poyecto
+
+npm create vite@latest mi-mini-spa -- --template react
+cd mi-mini-spa
+npm install
+
+npm install react-router-dom react-toastify react-loading-skeleton
+npm install @fontsource-variable/open-sans @fontsource-variable/roboto
+
+Librerias
+
+npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init -p
+
+
+npm install react-bootstrap bootstrap
+npm install @chakra-ui/react @emotion/react @emotion/styled framer-motion
+
+
+
+

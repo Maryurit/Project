@@ -1,0 +1,7 @@
+notifyFavorite.js
+
+import { toast } from 'react-toastify'
+
+export function notifyFavorite(isFav) {
+  toast(isFav ? '¡Agregado a favoritos!' : 'Removido de favoritos')
+}

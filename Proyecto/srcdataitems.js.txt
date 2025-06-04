@@ -1,0 +1,19 @@
+src/data/items.js
+
+export const items = [
+  {
+    id: 1,
+    image: 'https://via.placeholder.com/150',
+    name: 'Guitarra Acústica',
+    price: '$120',
+    shortDescription: 'Instrumento musical de cuerdas.',
+  },
+  {
+    id: 2,
+    image: 'https://via.placeholder.com/150',
+    name: 'Bajo Eléctrico',
+    price: '$150',
+    shortDescription: 'Ideal para ritmos potentes.',
+  },
+  // ...hasta mínimo 8
+]
