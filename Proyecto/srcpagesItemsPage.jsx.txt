@@ -1,28 +1,34 @@
 // src/pages/ItemsPage.jsx
 
-import { useEffect, useState } from 'react'
-import { items as mockItems } from '../data/items'
-import { useDebounce } from '../hooks/useDebounce'
-import ItemCard from '../components/ItemCard'
-import ItemSearch from '../components/ItemSearch'
-import LoadingSkeleton from '../components/LoadingSkeleton'
+import { useEffect, useState } from 'react';
+import { items as mockItems } from '../data/items';
+import { useDebounce } from '../hooks/useDebounce';
+import ItemCard from '../components/ItemCard';
+import ItemSearch from '../components/ItemSearch';
+import LoadingSkeleton from '../components/LoadingSkeleton';
+// Si luego usas API real:
+// import { getItems } from '../api/itemsApi';
 
 export default function ItemsPage() {
-  const [search, setSearch] = useState('')
-  const debouncedSearch = useDebounce(search)
-  const [loading, setLoading] = useState(false)
-  const [filtered, setFiltered] = useState([])
+  const [search, setSearch] = useState('');
+  const debouncedSearch = useDebounce(search);
+  const [loading, setLoading] = useState(false);
+  const [filtered, setFiltered] = useState([]);
 
   useEffect(() => {
-    setLoading(true)
-    setTimeout(() => {
+    setLoading(true);
+
+    // Simulación de tiempo de espera (500ms) para UX amigable
+    const timeout = setTimeout(() => {
       const result = mockItems.filter(item =>
         item.name.toLowerCase().includes(debouncedSearch.toLowerCase())
-      )
-      setFiltered(result)
-      setLoading(false)
-    }, 500)
-  }, [debouncedSearch])
+      );
+      setFiltered(result);
+      setLoading(false);
+    }, 500);
+
+    return () => clearTimeout(timeout); // Limpieza si cambia rápido el input
+  }, [debouncedSearch]);
 
   return (
     <div>
@@ -37,5 +43,5 @@ export default function ItemsPage() {
         </div>
       )}
     </div>
-  )
+  );
 }
