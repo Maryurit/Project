@@ -25,3 +25,20 @@ src/
 │   └── notifyFavorite.js
 ├── App.jsx
 └── main.jsx
+
+
+Cineplanet
+cineplanet-spa/
+│
+├─ src/
+│  ├─ api/                 # (Opcional si usas API real)
+│  ├─ components/          # Componentes reutilizables
+│  ├─ data/                # Datos mock (películas actuales y próximas)
+│  ├─ pages/               # HomePage, MoviesPage, ContactPage, etc.
+│  ├─ App.jsx              # Rutas
+│  ├─ main.jsx             # ChakraProvider, ToastContainer
+│  └─ css/ or styles/
+│
+├─ public/
+├─ package.json
+└─ vite.config.js
