@@ -42,3 +42,149 @@ cineplanet-spa/
 ├─ public/
 ├─ package.json
 └─ vite.config.js
+
+audiomusica-spa/
+├── public/
+│   └── images/                  # Imágenes locales de instrumentos
+├── src/
+│   ├── components/
+│   │   ├── InstrumentCard.jsx
+│   │   └── InstrumentSearch.jsx
+│   ├── data/
+│   │   └── instruments.js       # Lista mock de instrumentos
+│   ├── hooks/
+│   │   └── useDebounce.js
+│   ├── pages/
+│   │   ├── HomePage.jsx
+│   │   └── InstrumentsPage.jsx
+│   ├── utils/
+│   │   └── localStorageUtils.js
+│   ├── App.jsx
+│   ├── main.jsx
+│   └── styles/
+│       └── index.css
+
+bcp-dashboard/
+├── src/
+│   ├── components/
+│   │   └── ProductCard.jsx
+│   ├── data/
+│   │   └── products.js          # Mock de tarjetas, cuentas, préstamos
+│   ├── hooks/
+│   │   └── useDebounce.js
+│   ├── pages/
+│   │   ├── Dashboard.jsx
+│   │   └── Favorites.jsx
+│   ├── utils/
+│   │   └── localStorageUtils.js
+│   ├── App.jsx
+│   ├── main.jsx
+│   └── styles/
+│       └── index.css
+
+yape-wallet-landing/
+├── public/
+│   └── images/
+├── src/
+│   ├── components/
+│   │   ├── FeatureCard.jsx
+│   │   ├── HeroSlider.jsx
+│   │   └── ServicesGrid.jsx
+│   ├── data/
+│   │   └── features.js
+│   ├── pages/
+│   │   └── HomePage.jsx
+│   ├── App.jsx
+│   ├── main.jsx
+│   └── styles/
+│       └── index.css
+
+central-reservas/
+├── public/
+│   └── images/
+├── src/
+│   ├── components/
+│   │   ├── Hero.jsx
+│   │   ├── DishCard.jsx
+│   │   └── ReservationForm.jsx
+│   ├── data/
+│   │   └── menu.js
+│   ├── pages/
+│   │   └── HomePage.jsx
+│   ├── App.jsx
+│   ├── main.jsx
+│   └── styles/
+│       └── index.css
+
+canva-spa/
+├── components/
+│   ├── TemplateSlider.jsx
+│   └── CategoryGrid.jsx
+├── data/
+│   └── categories.js
+├── pages/
+│   └── HomePage.jsx
+
+airbnb-spa/
+├── components/
+│   ├── SearchHero.jsx
+│   ├── PropertySlider.jsx
+│   └── DestinationGrid.jsx
+├── data/
+│   └── destinations.js
+
+spotify-spa/
+├── components/
+│   ├── HeroSlider.jsx
+│   ├── PlaylistCard.jsx
+│   └── PlaylistSearch.jsx
+├── data/
+│   └── playlists.js
+
+netflix-spa/
+├── components/
+│   ├── FeaturedHero.jsx
+│   └── CategorySlider.jsx
+├── data/
+│   └── moviesByCategory.js
+
+dribbble-spa/
+├── components/
+│   ├── HeroSlider.jsx
+│   └── ShotGrid.jsx
+├── data/
+│   └── shots.js
+
+rickmorty-spa/
+├── api/
+│   └── charactersApi.js
+├── components/
+│   ├── CharacterCard.jsx
+│   └── CharacterSearch.jsx
+├── hooks/
+│   └── useDebounce.js
+├── pages/
+│   └── CharactersPage.jsx
+
+dragonball-spa/
+├── api/
+│   └── charactersApi.js
+
+pokemon-spa/
+├── api/
+│   └── pokemonsApi.js
+
+tmdb-spa/
+├── api/
+│   └── moviesApi.js
+├── components/
+│   ├── HeroSlider.jsx
+│   ├── MovieGrid.jsx
+│   └── MovieSearch.jsx
+
+fakestore-spa/
+├── api/
+│   └── productsApi.js
+├── components/
+│   ├── ProductCard.jsx
+│   └── ProductSearch.jsx
